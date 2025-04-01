@@ -1,0 +1,93 @@
+.capabilities {
+  display: flex;
+  padding: 54px 0 200px;
+
+  .capabilitiesLeftColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 554px;
+    width: 100%;
+    position: relative;
+
+    .capabilitiesCardName {
+      position: absolute;
+      color: black;
+      top: 35px;
+      left: 70px;
+      font-family: var(--font-family), sans-serif;
+      font-weight: 600;
+      font-size: 21px;
+      line-height: 152%;
+    }
+
+    .spotlight {
+      position: absolute;
+      bottom: -36px;
+      max-width: 554px;
+      width: 100%;
+    }
+
+    .capabilitiesCopywritingContainer {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      bottom: -457px;
+      max-width: 425px;
+      width: 100%;
+      text-align: center;
+
+      h4 {
+        font-family: var(--font-family), sans-serif;
+        font-weight: 600;
+        font-size: 38px;
+        line-height: 111%;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--skyblue);
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-family: var(--font-family), sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 142%;
+        text-align: center;
+        color: var(--skyblue);
+      }
+
+    }
+  }
+
+  .capabilitiesRightColumn {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-family: var(--font-family), sans-serif;
+      font-size: 48px;
+      line-height: 121%;
+      text-transform: capitalize;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-family: var(--font-family-medium), sans-serif;
+      font-size: 18px;
+      line-height: 156%;
+      color: var(--secondary);
+    }
+    .creating {
+      margin-bottom: 24px;
+    }
+
+    .Dont {
+      margin-bottom: 42px;
+    }
+  }
+
+
+}

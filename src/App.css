@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'Clash Grotesk';
+    src: url('../public/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Semibold.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Clash Grotesk Medium';
+    src: url('../public/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Medium.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../public/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-BoldItalic.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nippo';
+    src: url('../public/fonts/Nippo_Complete/Fonts/TTF/Nippo-Variable.ttf') format('truetype'),
+    url('../public/fonts/Nippo_Complete/Fonts/OTF/Nippo-Medium.otf') format('opentype'),
+    url('../public/fonts/Nippo_Complete/Fonts/WEB/fonts/Nippo-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+:root {
+    --500: #04020d;
+    --white: #f7f7fa;
+    --secondary: #d6dae3;
+    --skyblue: #a5e7ff;
+    --grey---l: #7e7994;
+    --grey-m: #545163;
+    --grey-h: #32303f;
+}
+:root {
+    --font-family: "Clash Grotesk", sans-serif;
+    --font-family-medium: "Clash Grotesk Medium", sans-serif;
+    --second-family: "Satoshi", sans-serif;
+    --third-family: "Nippo", sans-serif;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1365px;
+    @media (min-width: 1080px) and (max-width: 1440px) {
+        max-width: calc(1000px + 365 * (100vw - 1080px) / 360);
+    }
+    @media (min-width: 768px) and (max-width: 1080px) {
+        max-width: calc(686px + 314 * (100vw - 768px) / 312);
+    }
+    @media (min-width: 480px) and (max-width: 768px) {
+        max-width: calc(444px + 242 * (100vw - 480px) / 288);
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+        max-width: calc(284px + 160 * (100vw - 320px) / 160);
+    }
+}
+p,a,h1,h2,h3,h4,h5,h6,ul,li {
+    margin: 0;
+    padding: 0;
+}

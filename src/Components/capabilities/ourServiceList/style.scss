@@ -1,0 +1,50 @@
+.serviceList {
+  color: #8f92a0;
+  max-width: 811px;
+  width: 100%;
+
+  .serviceListHeaderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: linear-gradient(90deg, #9e63ff 0%, #ff2da0 100%);
+    padding: 12px 28px;
+    max-width: 811px;
+
+    p {
+      font-family: var(--font-family-medium), sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: black;
+    }
+
+    .arrowContainer {
+      display: flex;
+
+    }
+
+    .arrowContainer > *:nth-child(1),
+    .arrowContainer > *:nth-child(2) {
+      margin-right: 12px;
+    }
+  }
+
+  .serviceListItemsContainer {
+    background: linear-gradient(180deg, #1e071f 0%, #0b091c 100%);
+    max-width: 811px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px;
+
+    .serviceItem {
+      display: flex;
+      max-width: 365px;
+      width: 100%;
+      padding: 11px;
+    }
+  }
+}
