@@ -1,0 +1,57 @@
+.networkCarouselContainer {
+  width: 100%;
+  overflow: hidden;
+  padding: 30px 0;
+}
+
+.networkCarousel {
+  display: flex;
+  gap: 20px;
+  padding: 0 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none; /* Для Internet Explorer и Edge */
+  scrollbar-width: none; /* Для Firefox */
+}
+
+.carouselItem {
+  flex: 0 0 auto;
+  min-width: 200px;
+  max-width: 300px;
+  width: 100%;
+  height: 100px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover {
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+  }
+}
+
+.carouselImage {
+  min-width: 200px;
+  max-width: 300px;
+  height: 100px;
+}
+
+.carouselFallback {
+  text-align: center;
+  padding: 10px;
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,27 @@
+.network{
+  background: linear-gradient(180deg, #1e071f 0%, #0b091c 100%);
+  max-width: 1360px;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+  .networkMainContent{
+    text-align: center;
+    max-width: 677px;
+    width: 100%;
+    padding: 54px 0;
+    .networkCard{
+      margin-bottom: 50px;
+    }
+    h3{
+      margin-bottom: 24px;
+    }
+    p{
+      margin-bottom: 42px;
+    }
+  }
+}
