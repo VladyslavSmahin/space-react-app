@@ -54,6 +54,8 @@
 .container {
     margin: 0 auto;
     max-width: 1365px;
+    width: 100%;
+
     @media (min-width: 1080px) and (max-width: 1440px) {
         max-width: calc(1000px + 365 * (100vw - 1080px) / 360);
     }

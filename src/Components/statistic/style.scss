@@ -5,15 +5,17 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 1365px;
-    @media (max-width: 1080px) {
-      max-width: 500px;
+    @media (max-width: 1439px) {
+      max-width: 1000px;
+      justify-content: space-around;
+    }
+    .partnerCard{
+      max-width: 336px;
+      @media (min-width: 320px) and (max-width: 759px) {
+        max-width: calc(140px + 198 * (100vw - 320px) / 439);
+      }
+
     }
   }
 
-  .partnerCard {
-    max-width: 340px;
-    @media (min-width: 320px) and (max-width: 1920px) {
-      max-width: calc(143px + 197 * (100vw - 320px) / 1600);
-    }
-  }
 }

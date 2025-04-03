@@ -15,10 +15,45 @@ function Carousel({ links }) {
         slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 100,
+        autoplaySpeed: 0,
+        arrows: false,
         loop: true,
         cssEase: "ease-in-out",
         pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 1300, // Максимальная ширина для этой настройки
+                settings: {
+                    slidesToShow: 4, // 3 слайда на экранах до 750px
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 1100, // Максимальная ширина для этой настройки
+                settings: {
+                    slidesToShow: 3, // 3 слайда на экранах до 750px
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 800, // Максимальная ширина для этой настройки
+                settings: {
+                    slidesToShow: 2, // 3 слайда на экранах до 750px
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 480, // Максимальная ширина для этой настройки
+                settings: {
+                    slidesToShow: 1, // 2 слайда на экранах до 480px
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+        ]
     };
     const handleMouseEnter = () => {
         if (sliderRef.current) {
@@ -34,7 +69,8 @@ function Carousel({ links }) {
     return (
         <Slider {...settings}  ref={sliderRef}
                 onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}>
+                onMouseLeave={handleMouseLeave}
+                className="custom-carousel">
             {links && links.length > 0 ? (
                 links.map((link, index) => (
                     <a

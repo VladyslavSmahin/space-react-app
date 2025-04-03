@@ -23,7 +23,7 @@ function Header({ className = "", onClick }) {
     };
 
     return (
-        <div className='headerContainer container'>
+        <div className='headerContainer '>
             <div className={`header container ${isOpen ? "headerBurgerMenuOpen" : ""} ${className}`}>
                 <Logo />
                 <NavBar/>

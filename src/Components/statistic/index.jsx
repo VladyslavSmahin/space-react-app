@@ -8,7 +8,7 @@ const images = [
 ]
     return (
         <div className='statisticContainer container'>
-            <div className='statistic container'>
+            <div className='statistic'>
                 {images.map((image, index) => (
                     <img
                         key={index}

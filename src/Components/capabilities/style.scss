@@ -1,10 +1,32 @@
 .capabilities {
   display: flex;
+  align-items: center;
   padding: 54px 0 200px;
+  position: relative;
 
-  @media  (max-width: 1439px) {
+  @media (max-width: 1439px) {
     flex-direction: column;
   }
+  @media (max-width: 757px) {
+    padding: 100px 0 200px;
+  }
+  .capabilitiesCardName {
+    position: absolute;
+    color: black;
+    top: 90px;
+    left: 70px;
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 152%;
+    @media (min-width: 1080px) and (max-width: 1439px) {
+      left: calc(70px + 190 * (100vw - 1080px) / 359);
+    }
+    @media (max-width: 757px) {
+      top: 35px;
+    }
+  }
+
   .capabilitiesLeftColumn {
     display: flex;
     flex-direction: column;
@@ -13,32 +35,29 @@
     width: 100%;
     position: relative;
 
-    .capabilitiesCardName {
-      position: absolute;
-      color: black;
-      top: 35px;
-      left: 70px;
-      font-family: var(--font-family), sans-serif;
-      font-weight: 600;
-      font-size: 21px;
-      line-height: 152%;
+    @media (max-width: 1439px) {
+      display: none;
     }
+
 
     .spotlight {
       position: absolute;
-      bottom: -36px;
+      bottom: -323px;
       max-width: 554px;
       width: 100%;
+
+
     }
 
     .capabilitiesCopywritingContainer {
       display: flex;
       flex-direction: column;
       position: relative;
-      bottom: -457px;
+      bottom: -125px;
       max-width: 425px;
       width: 100%;
       text-align: center;
+
 
       h4 {
         font-family: var(--font-family), sans-serif;
@@ -67,29 +86,47 @@
   .capabilitiesRightColumn {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
 
-    h3 {
-      font-family: var(--font-family), sans-serif;
-      font-size: 48px;
-      line-height: 121%;
-      text-transform: capitalize;
-      color: #fff;
-      margin-bottom: 24px;
+    @media (min-width: 320px) and (max-width: 1080px) {
+      max-width: calc(284px + 716 * (100vw - 320px) / 760);
     }
 
-    p {
-      font-family: var(--font-family-medium), sans-serif;
-      font-size: 18px;
-      line-height: 156%;
-      color: var(--secondary);
-    }
-    .creating {
-      margin-bottom: 24px;
+    .capabilitiesRightColumnText {
+      max-width: 594px;
+      align-self: flex-end;
+
+      @media (min-width: 758px) and (max-width: 1440px) {
+        max-width: calc(460px + 134 * (100vw - 758px) / 682);
+      }
+
+      h3 {
+        font-family: var(--font-family), sans-serif;
+        font-size: 48px;
+        line-height: 121%;
+        text-transform: capitalize;
+        color: #fff;
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-family: var(--font-family-medium), sans-serif;
+
+        font-size: 18px;
+        line-height: 156%;
+        color: var(--secondary);
+      }
+
+      .creating {
+        margin-bottom: 24px;
+      }
+
+      .Dont {
+        margin-bottom: 42px;
+      }
     }
 
-    .Dont {
-      margin-bottom: 42px;
-    }
   }
 
 

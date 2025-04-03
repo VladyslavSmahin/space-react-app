@@ -2,6 +2,9 @@
   color: #8f92a0;
   max-width: 811px;
   width: 100%;
+  @media (max-width: 1439px) {
+    max-width: 1000px;
+  }
 
   .serviceListHeaderContainer {
     display: flex;
@@ -10,7 +13,7 @@
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     background: linear-gradient(90deg, #9e63ff 0%, #ff2da0 100%);
     padding: 12px 28px;
-    max-width: 811px;
+    max-width: 1000px;
 
     p {
       font-family: var(--font-family-medium), sans-serif;
@@ -19,6 +22,11 @@
       letter-spacing: 0.03em;
       text-transform: uppercase;
       color: black;
+
+      @media (min-width: 320px) and (max-width: 720px) {
+        font-size: calc(14px + 4 * (100vw - 320px) / 400);
+      }
+
     }
 
     .arrowContainer {
@@ -33,18 +41,70 @@
   }
 
   .serviceListItemsContainer {
+
     background: linear-gradient(180deg, #1e071f 0%, #0b091c 100%);
-    max-width: 811px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    max-width: 1000px;
+    display: grid;
+    gap: 10px;
+    justify-content: center;
     padding: 15px;
 
+    @media (min-width: 1440px) {
+      grid-template-columns: repeat(2, 1fr); // Две колонки 1440-1920px
+
+    }
+
+    @media (min-width: 758px) and (max-width: 1439px) {
+      grid-template-columns: repeat(3, 1fr); // Три колонки 758-1439px
+    }
+
+    @media (max-width: 757px) {
+      grid-template-columns: repeat(2, 1fr); // Две колонки 320-757px
+    }
+
     .serviceItem {
+
+      cursor: pointer;
       display: flex;
+      align-items: center;
       max-width: 365px;
       width: 100%;
       padding: 11px;
+
+      @media (max-width: 1439px) {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 120px;
+        max-width: 320px;
+        box-sizing: border-box;
+      }
+
+      img {
+        margin-right: 12px;
+        @media (max-width: 480px) {
+          max-height: 46px;
+        }
+      }
+
+      p {
+        font-family: var(--font-family), sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 157%;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #8f92a0;
+        @media (max-width: 480px) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .serviceItem:hover {
+      background: rgba(1, 1, 1, 0.1);
     }
   }
 }

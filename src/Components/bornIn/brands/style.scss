@@ -1,3 +1,52 @@
-.partnerCard{
-  max-width: 338px;
+.brandContainer{
+  width: 100%;
+  overflow: hidden;
+  .brand{
+    @media  (max-width: 1079px) {
+      display: none;
+    }
+    .brandsTitle{
+      font-family: var(--font-family), sans-serif;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 133%;
+      color: var(--white);
+      margin-bottom: 42px;
+      text-align: center;
+
+      span{
+        background: linear-gradient(90deg, #16baff 0%, #8cc8ff 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .brandsImagesContainer{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .partnerCard{
+        max-width: 338px;
+        backdrop-filter: blur(24px);
+        background: rgba(239, 60, 189, 0.05);
+        border-radius: 12px;
+        padding: 12px 4px;
+        width: 100%;
+        box-sizing: border-box;
+        height: 126px;
+
+        @media (min-width: 1080px) and (max-width: 1920px) {
+          max-width: calc(247px + 91 * (100vw - 1080px) / 840);
+        }
+
+      }
+    }
+  }
+  .slick-slider{
+    @media (min-width: 1080px){
+      display: none;
+    }
+  }
 }

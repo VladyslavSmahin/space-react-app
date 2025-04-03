@@ -1,55 +1,140 @@
 .bornInContainer {
-  padding: 122px 0 200px;
+  max-width: 1370px;
+  padding: 0px 0 200px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 
-  @media  (max-width: 750px) {
-    padding: 232px 0 200px;
+  @media (min-width: 320px) and (max-width: 750px) {
+    padding-top: calc(128px + 50 * (100vw - 320px) / 430);
   }
 
-  .bornInTitle {
+  .bornIn {
+    padding-top: 122px;
 
-    h1 {
-      font-family: var(--font-family-bold), sans-serif;
-      font-weight: 700;
-      font-size: 86px;
-      line-height: 116%;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
+    @media (min-width: 320px) and (max-width: 1920px) {
+      padding-top: calc(0px + 122 * (100vw - 320px) / 1600);
+    }
 
-      @media (min-width: 320px) and (max-width: 760px) {
-        font-size: 52px;
+    .bornInTitle {
+      margin-bottom: 64px;
+      position: relative;
+      z-index: 1;
+
+      @media (min-width: 320px) and (max-width: 1079px) {
+        margin-bottom: calc(26px + 42 * (100vw - 320px) / 759);
       }
 
-      .h1Born {
-        background: linear-gradient(45deg, #16BAFF, #8CC8FF);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
+      h1 {
+        font-family: var(--font-family-bold), sans-serif;
+        font-weight: 700;
+        font-size: 86px;
+        line-height: 116%;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+
+        @media (min-width: 320px) and (max-width: 1920px) {
+          font-size: calc(32px + 54 * (100vw - 320px) / 1600);
+        }
+
+        .h1Born {
+          background: linear-gradient(45deg, #16BAFF, #8CC8FF);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
 
 
-      .h1Built {
+        .h1Built {
           background: linear-gradient(45deg, #9E63FF, #FF2DA0);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+        }
+
+        margin-bottom: 26px;
+      }
+
+      p {
+        font-family: var(--font-family-medium), sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 156%;
+        color: var(--secondary);
+        max-width: 550px;
       }
     }
 
-    p {
+    .born-in-button {
+      margin-bottom: 200px;
+      position: relative;
+      z-index: 1;
+      @media (max-width: 1439px) {
+        margin-bottom: 690px;
+      }
+      @media (min-width: 1000px) and (max-width: 1439px) {
+        margin-bottom: calc(800px - 110 * (100vw - 1000px) / 439);
+      }
+      @media (min-width: 320px) and (max-width: 1000px) {
+        margin-bottom: calc(330px + 470 * (100vw - 320px) / 680);
+      }
+    }
 
+    .born-in-brands {
+      margin-bottom: 200px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .goingTheExtra {
+      font-family: var(--font-family), sans-serif;
+      font-weight: 700;
+      font-size: 66px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--white);
+      position: relative;
+
+      @media (min-width: 1080px) and (max-width: 1920px) {
+        font-size: calc(48px + 18 * (100vw - 1090px) / 940);
+      }
+
+      .blushipLabel{
+        position: absolute;
+        top: 159px;
+        left: 189px;
+      }
+    }
+
+    .goingTheExtra div:nth-child(1) {
+      text-align: right;
+    }
+
+    .goingTheExtra div:nth-child(2) {
+      text-align: left;
     }
   }
+}
 
-  .born-in-button {
-    margin-bottom: 200px;
+.bornInMainPhoto {
+  pointer-events: none;
+  position: absolute;
+  top: 25px;
+  right: -120px;
+  z-index: 0;
+  max-width: 1640px;
+
+  @media (min-width: 320px) and (max-width: 1080px) {
+    max-width: calc(540px + 1100 * (100vw - 320px) / 760);
+    right: calc(-50px - 70 * (100vw - 320px) / 760);
   }
-
-  .born-in-brands {
-    margin-bottom: 200px;
+  @media (min-width: 1080px) and (max-width: 1439px) {
+    top: 400px;
+    right: calc(-80px + 80 * (100vw - 1080px) / 359);
+    z-index: 0;
   }
-
-  .bornImGoing {
-    span {
-
-    }
+  @media (min-width: 320px) and (max-width: 1080px) {
+    top: calc(470px - 70 * (100vw - 320px) / 760);
+    right: calc(-40px + 40 * (100vw - 320px) / 760);
+    z-index: 0;
   }
 
 }

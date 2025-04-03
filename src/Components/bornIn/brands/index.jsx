@@ -1,30 +1,34 @@
 import './style.scss'
+import Carousel from "../../network/carousel/index.jsx";
 
-function Brands({ className = '' }) {
-    const images = [
-        { path: '/images/partnerCard.png', title: 'Partner Card' },
-        { path: '/images/partnerCard-1.png', title: 'Partner Card' },
-        { path: '/images/partnerCard-2.png', title: 'Partner Card' },
-        { path: '/images/partnerCard-3.png', title: 'Partner Card' },
-        { path: '/images/partnerCard-4.png', title: 'Partner Card' },
-        { path: '/images/partnerCard-5.png', title: 'Partner Card' },
-        { path: '/images/partnerCard-6.png', title: 'Partner Card' },
-        { path: '/images/partnerCard-7.png', title: 'Partner Card' },
+function Brands({className = ''}) {
+    const links = [
+        {path: '/images/partnerCard.svg', title: 'Partner Card', url: '#'},
+        {path: '/images/partnerCard-1.svg', title: 'Partner Card', url: '#'},
+        {path: '/images/partnerCard-2.svg', title: 'Partner Card', url: '#'},
+        {path: '/images/partnerCard-3.svg', title: 'Partner Card', url: '#'},
+        {path: '/images/partnerCard-4.svg', title: 'Partner Card', url: '#'},
+        {path: '/images/partnerCard-5.svg', title: 'Partner Card', url: '#'},
+        {path: '/images/partnerCard-6.svg', title: 'Partner Card', url: '#'},
+        {path: '/images/partnerCard-7.svg', title: 'Partner Card', url: '#'},
     ];
 
     return (
-        <div className={className}>
-            <h4>Some Of The Brands That Trust Us!</h4>
-            <div className="brandsImagesCaonainer">
-                {images.map((image, index) => (
-                    <img
-                        key={index}
-                        className="partnerCard"
-                        src={image.path}
-                        alt={image.title}  // присваиваем title как alt
-                    />
-                ))}
+        <div className='brandContainer'>
+            <div className={`brand ${className}`}>
+                <h4 className='brandsTitle'>Some Of The Brands <span>That Trust Us!</span></h4>
+                <div className="brandsImagesContainer">
+                    {links.map((image, index) => (
+                        <img
+                            key={index}
+                            className="partnerCard"
+                            src={image.path}
+                            alt={image.title}  // присваиваем title как alt
+                        />
+                    ))}
+                </div>
             </div>
+            <Carousel links={links} className='brand1079'/>
         </div>
     );
 }
