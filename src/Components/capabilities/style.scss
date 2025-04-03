@@ -2,6 +2,9 @@
   display: flex;
   padding: 54px 0 200px;
 
+  @media  (max-width: 1439px) {
+    flex-direction: column;
+  }
   .capabilitiesLeftColumn {
     display: flex;
     flex-direction: column;

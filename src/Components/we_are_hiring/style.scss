@@ -18,7 +18,6 @@
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
-    line-height: 157%;
     letter-spacing: 0.03em;
   }
   .buttonArrow{
@@ -31,4 +30,8 @@
     height: 18px;
     background: rgba(255, 255, 255, 0.15);
   }
+}
+.we_are_hiring p:first-of-type{
+  color: black;
+
 }

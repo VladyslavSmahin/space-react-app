@@ -1,0 +1,19 @@
+.statisticContainer {
+  margin-bottom: 200px;
+
+  .statistic {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1365px;
+    @media (max-width: 1080px) {
+      max-width: 500px;
+    }
+  }
+
+  .partnerCard {
+    max-width: 340px;
+    @media (min-width: 320px) and (max-width: 1920px) {
+      max-width: calc(143px + 197 * (100vw - 320px) / 1600);
+    }
+  }
+}

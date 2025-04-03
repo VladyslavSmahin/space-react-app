@@ -2,7 +2,7 @@ import './style.scss'
 import CardName from "../cardName/index.jsx";
 import Button from "../bornIn/header/button/index.jsx";
 import Carousel from "./carousel/index.jsx";
-
+import imgBg from "/images/services_bg.png"
 function Network() {
 
     const links = [
@@ -23,13 +23,15 @@ function Network() {
     return (
         <div className='networkContainer container'>
             <div className='network'>
-                <div className='networkMainContent'>
-                    <CardName text='network' className='networkCard'/>
-                    <h3 className='networkTitle'>Our Network, Is Your Network</h3>
-                    <p className='networkText'>Our network Community Bluprint™ is proven, the data is undeniable. When
-                        you provide founders with the tools to succeed, a dedicated growth team, and the largest
-                        sold-out network in the industry, success follows. What are you waiting for?</p>
-                    <Button text='book now'/>
+                <div className='networkMainContentContainer'>
+                    <div className='networkMainContent'>
+                        <CardName text='network' className='networkCard'/>
+                        <h3 className='networkTitle'>Our Network, Is Your Network</h3>
+                        <p className='networkText'>Our network Community Bluprint™ is proven, the data is undeniable. When
+                            you provide founders with the tools to succeed, a dedicated growth team, and the largest
+                            sold-out network in the industry, success follows. What are you waiting for?</p>
+                        <Button text='book now'/>
+                    </div>
                 </div>
                 <div className='networkCarouselContainer'>
                         <Carousel links={links} />

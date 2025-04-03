@@ -1,9 +1,55 @@
-.bornInContainer{
+.bornInContainer {
   padding: 122px 0 200px;
-}
-.born-in-button{
-  margin-bottom: 200px;
-}
-.born-in-brands{
-  margin-bottom: 200px;
+
+  @media  (max-width: 750px) {
+    padding: 232px 0 200px;
+  }
+
+  .bornInTitle {
+
+    h1 {
+      font-family: var(--font-family-bold), sans-serif;
+      font-weight: 700;
+      font-size: 86px;
+      line-height: 116%;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+
+      @media (min-width: 320px) and (max-width: 760px) {
+        font-size: 52px;
+      }
+
+      .h1Born {
+        background: linear-gradient(45deg, #16BAFF, #8CC8FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+
+      .h1Built {
+          background: linear-gradient(45deg, #9E63FF, #FF2DA0);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+      }
+    }
+
+    p {
+
+    }
+  }
+
+  .born-in-button {
+    margin-bottom: 200px;
+  }
+
+  .born-in-brands {
+    margin-bottom: 200px;
+  }
+
+  .bornImGoing {
+    span {
+
+    }
+  }
+
 }

@@ -1,11 +1,16 @@
 @font-face {
-    font-family: 'Clash Grotesk';
+    font-family: 'Clash Grotesk Semibold 600';
     src: url('../public/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Semibold.woff') format('woff');
     font-style: normal;
 }
 @font-face {
-    font-family: 'Clash Grotesk Medium';
+    font-family: 'Clash Grotesk Medium 500';
     src: url('../public/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Medium.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Clash Grotesk Bold 700';
+    src: url('../public/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Bold.woff') format('woff');
     font-style: normal;
 }
 @font-face {
@@ -33,8 +38,9 @@
     --grey-h: #32303f;
 }
 :root {
-    --font-family: "Clash Grotesk", sans-serif;
-    --font-family-medium: "Clash Grotesk Medium", sans-serif;
+    --font-family: "Clash Grotesk Semibold 600", sans-serif;
+    --font-family-medium: "Clash Grotesk Medium 500", sans-serif;
+    --font-family-bold: "Clash Grotesk Bold 700", sans-serif;
     --second-family: "Satoshi", sans-serif;
     --third-family: "Nippo", sans-serif;
 }
@@ -64,4 +70,7 @@
 p,a,h1,h2,h3,h4,h5,h6,ul,li {
     margin: 0;
     padding: 0;
+}
+a, button{
+    cursor: pointer
 }
