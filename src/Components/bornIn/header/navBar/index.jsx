@@ -5,15 +5,15 @@ function NavBar({className = ""}) {
 
 
 return (
-    <div className='navbarContainer'>
-        <nav className='navbar'>
-            <ul className='navbar-ul'>
-                <li className='nav-item active'><a href='#'>servises</a></li>
-                <li className='nav-item active'><a href='#'>network</a></li>
-                <li className='nav-item active'><a href='#'>team</a></li>
+    <div className={`navbarContainer ${className}`}>
+        <nav className={`navbar ${className}`}>
+            <ul className={`navbar-ul ${className}`}>
+                <li className={`nav-item active ${className}`}><a href='#'>servises</a></li>
+                <li className={`nav-item active ${className}`}><a href='#'>network</a></li>
+                <li className={`nav-item active ${className}`}><a href='#'>team</a></li>
             </ul>
         </nav>
-        <img src='/images/call_btn.png' className='navbarBtn479' alt="logo" />
+        <img src='/images/call_btn.png' className={`navbarBtn479 ${className}`} alt="logo" />
     </div>
 );
 }

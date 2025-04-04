@@ -36,7 +36,15 @@ function Header({ className = "", onClick }) {
                 </button>
             </div>
             <div className='burgerMenuContent'>
-
+                <NavBar className='burgerNav'/>
+                <div className='ourSocials'>
+                    <p>Check our socials:</p>
+                    <div className='socialsImages'>
+                        <img src='/images/SocialBtn.svg' alt='socialsImage' />
+                        <img src='/images/SocialBtn-1.svg' alt='socialsImage' />
+                        <img src='/images/SocialBtn-2.svg' alt='socialsImage' />
+                    </div>
+                </div>
             </div>
         </div>
     );

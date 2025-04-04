@@ -4,13 +4,14 @@
   left: 0;
 
 
-  @media  (max-width: 750px) {
+  @media (max-width: 750px) {
     position: fixed;
     width: 100%;
     top: 40px;
   }
 
 }
+
 .headerContainerOpen {
   background: linear-gradient(180deg, #1e071f 0%, #0b091c 100%);
 }
@@ -23,14 +24,14 @@
   padding: 30px 0;
   margin: 0 auto;
 
-  @media  (max-width: 750px) {
+  @media (max-width: 750px) {
     padding: 22px 0;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(500px);
     z-index: 10;
   }
 
-  .burgerMenuBtn{
+  .burgerMenuBtn {
     display: none;
     background-color: transparent;
     color: white;
@@ -40,16 +41,17 @@
     font-size: 19px;
     border: 1px solid white;
     margin-left: 8px;
-    @media  (max-width: 750px) {
+    @media (max-width: 750px) {
       display: block;
     }
 
-    @media  (max-width: 479px) {
+    @media (max-width: 479px) {
       max-width: 41px;
       padding: 6px;
     }
   }
-  .burgerMenuBtnOpen{
+
+  .burgerMenuBtnOpen {
 
   }
 
@@ -58,32 +60,85 @@
     @media (min-width: 750px) and (max-width: 1440px) {
       max-width: calc(170px + 44 * (100vw - 750px) / 690);
     }
-    @media  (max-width: 750px) {
+    @media (max-width: 750px) {
       max-width: 170px;
       width: 100%;
     }
-    @media  (max-width: 479px) {
+    @media (max-width: 479px) {
       display: none;
     }
   }
-  .navbarBtn479{
+
+  .navbarBtn479 {
     display: none;
-    @media  (max-width: 479px) {
+    @media (max-width: 479px) {
       display: block;
     }
   }
 }
-.headerBurgerMenuOpen{
+
+.headerBurgerMenuOpen {
   background: transparent;
 }
-.burgerMenuContent{
+
+.burgerMenuContent {
   display: none;
   max-width: 750px;
   width: 100%;
   height: 400px;
 }
-.burgerMenuContentOpen{
-  display: block;
+
+.burgerMenuContentOpen {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.burgerMenuContent {
+  .navbarContainer .navbar .navbar-ul {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      display: block;
+      margin-bottom: 12px;
+
+      a {
+        font-family: var(--font-family), sans-serif;
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 117%;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: var(--white);
+
+      }
+    }
+  }
+
+
+  .navbarBtn479 {
+    display: none;
+  }
+
+  .ourSocials {
+    margin-top: 40px;
+
+    p {
+      font-family: var(--font-family), sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 171%;
+      text-transform: uppercase;
+      color: var(--grey---l);
+    }
+
+    .socialsImages {
+      margin-top: 14px;
+    }
+  }
 }
 
 
