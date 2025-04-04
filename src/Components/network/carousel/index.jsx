@@ -4,57 +4,62 @@ import "slick-carousel/slick/slick-theme.css";
 import React, {useRef} from "react";
 import Slider from "react-slick";
 
-function Carousel({ links }) {
+function Carousel({ links, className = '', slidesToShow = 5, settings: customSettings = {} }) {
 
     const sliderRef = useRef(null);
 
-    let settings = {
+    let defaultSettings = {
         dots: true,
         infinite: true,
-        speed: 3000,
+        speed: 1000,
         slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 0,
         arrows: false,
         loop: true,
-        cssEase: "ease-in-out",
+        cssEase: "linear",
         pauseOnHover: true,
         responsive: [
             {
-                breakpoint: 1300, // Максимальная ширина для этой настройки
+                breakpoint: 1300,
                 settings: {
-                    slidesToShow: 4, // 3 слайда на экранах до 750px
+                    slidesToShow: Math.max(3, slidesToShow - 1),
                     slidesToScroll: 1,
                     infinite: true,
                 }
             },
             {
-                breakpoint: 1100, // Максимальная ширина для этой настройки
+                breakpoint: 1100,
                 settings: {
-                    slidesToShow: 3, // 3 слайда на экранах до 750px
+                    slidesToShow: Math.max(2, slidesToShow - 2),
                     slidesToScroll: 1,
                     infinite: true,
                 }
             },
             {
-                breakpoint: 800, // Максимальная ширина для этой настройки
+                breakpoint: 800,
                 settings: {
-                    slidesToShow: 2, // 3 слайда на экранах до 750px
+                    slidesToShow: Math.max(1, slidesToShow - 3),
                     slidesToScroll: 1,
                     infinite: true,
                 }
             },
             {
-                breakpoint: 480, // Максимальная ширина для этой настройки
+                breakpoint: 480,
                 settings: {
-                    slidesToShow: 1, // 2 слайда на экранах до 480px
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true,
                 }
             },
         ]
     };
+
+    const mergedSettings = { ...defaultSettings, ...customSettings };
+
+    console.log(mergedSettings);
+
     const handleMouseEnter = () => {
         if (sliderRef.current) {
             sliderRef.current.slickPause();
@@ -67,30 +72,30 @@ function Carousel({ links }) {
         }
     };
     return (
-        <Slider {...settings}  ref={sliderRef}
+        <Slider {...defaultSettings}  ref={sliderRef}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className="custom-carousel">
+                className={`custom-carousel ${className}`}>
             {links && links.length > 0 ? (
                 links.map((link, index) => (
                     <a
                         key={index}
                         href={link.url}
-                        className={`carouselItem`}
+                        className={`carouselItem ${className}`}
                         rel="noopener noreferrer"
                     >
                         {link.path ? (
                             <img
                                 src={link.path}
                                 alt={link.title || link.url || "Изображение"}
-                                className={`carouselImage`}
+                                className={`carouselImage ${className}`}
                                 onError={(e) => {
                                     e.target.style.display = 'none'; // Скрываем изображение при ошибке
                                 }}
                             />
                         ) : null}
                         {!link.path && (link.title || link.url) && (
-                            <span className="carouselFallback">
+                            <span className={`carouselFallback ${className}`}>
                                 {link.title || link.url}
                             </span>
                         )}

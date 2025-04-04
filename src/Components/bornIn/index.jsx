@@ -21,9 +21,13 @@ function BornIn() {
                 <Button text="book now" className="born-in-button"/>
                 <Brands className="born-in-brands"/>
                 <div className='goingTheExtra'>
-                    <div>Going the extra mile</div>
-                    <div>sees no setbacks when you’re flying
-                    with</div>
+                    <span>Going the Extra Mile</span>
+                    <span>Sees No Setbacks When You're Flying </span>
+                    <span>with<img src='/images/BlushipLabel.svg' alt='BlushipLabel' className='blushipLabel'/></span>
+                </div>
+                <div className='goingTheExtra goingTheExtra1079'>
+                    <p>Going the Extra Mile</p>
+                    <p>Sees No Setbacks When You're Flying with</p>
                     <img src='/images/BlushipLabel.svg' alt='BlushipLabel' className='blushipLabel'/>
                 </div>
             </div>

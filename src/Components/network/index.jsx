@@ -30,7 +30,7 @@ function Network() {
                         <p className='networkText'>Our network Community Bluprint™ is proven, the data is undeniable. When
                             you provide founders with the tools to succeed, a dedicated growth team, and the largest
                             sold-out network in the industry, success follows. What are you waiting for?</p>
-                        <Button text='book now'/>
+                        <Button text='book now' className=''/>
                     </div>
                 </div>
                 <div className='networkCarouselContainer'>

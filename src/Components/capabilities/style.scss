@@ -1,7 +1,8 @@
 .capabilities {
   display: flex;
   align-items: center;
-  padding: 54px 0 200px;
+  justify-content: space-between;
+  padding: 40px 0 200px;
   position: relative;
 
   @media (max-width: 1439px) {
@@ -10,10 +11,14 @@
   @media (max-width: 757px) {
     padding: 100px 0 200px;
   }
+  @media (min-width: 320px) and (max-width: 1920px) {
+    padding-bottom: calc(84px + 116 * (100vw - 320px) / 1600);
+  }
+
   .capabilitiesCardName {
     position: absolute;
     color: black;
-    top: 90px;
+    top: 68px;
     left: 70px;
     font-family: var(--font-family), sans-serif;
     font-weight: 600;

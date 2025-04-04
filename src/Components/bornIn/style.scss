@@ -9,6 +9,13 @@
     padding-top: calc(128px + 50 * (100vw - 320px) / 430);
   }
 
+  @media (min-width: 759px) and (max-width: 1920px) {
+    padding-bottom: calc(112px + 88 * (100vw - 759px) / 1161);
+  }
+  @media (max-width: 759px) {
+    padding-bottom: 112px;
+  }
+
   .bornIn {
     padding-top: 122px;
 
@@ -88,29 +95,62 @@
       font-family: var(--font-family), sans-serif;
       font-weight: 700;
       font-size: 66px;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.036em;
       text-transform: uppercase;
       color: var(--white);
       position: relative;
+      display: flex;
+      flex-direction: column;
 
-      @media (min-width: 1080px) and (max-width: 1920px) {
-        font-size: calc(48px + 18 * (100vw - 1090px) / 940);
+      @media (min-width: 1080px) and (max-width: 1440px) {
+        font-size: calc(48px + 18 * (100vw - 1080px) / 360);
+      }
+      @media (max-width: 1079px) {
+        display: none;
       }
 
-      .blushipLabel{
+      .blushipLabel {
         position: absolute;
-        top: 159px;
-        left: 189px;
+        top: 160px;
+        left: 179px;
+        height: 86px;
+        @media (min-width: 1080px) and (max-width: 1440px) {
+          height: calc(65px + 21 * (100vw - 1080px) / 360);
+          top: calc(113px + 47 * (100vw - 1080px) / 360);
+          left: calc(130px + 49 * (100vw - 1080px) / 360);
+        }
       }
     }
 
-    .goingTheExtra div:nth-child(1) {
-      text-align: right;
+    .goingTheExtra span:nth-child(1) {
+      margin-left: auto;
     }
 
-    .goingTheExtra div:nth-child(2) {
-      text-align: left;
+    .goingTheExtra1079 {
+      display: none;
+      text-align: center;
+
+      @media (min-width: 320px) and (max-width: 1079px) {
+        font-size: calc(36px + 24 * (100vw - 320px) / 759);
+      }
+
+      @media (max-width: 1079px) {
+        display: flex;
+
+      }
+
+      p:nth-child(1) {
+        margin-left: inherit;
+      }
+
+      .blushipLabel {
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,);
+      }
     }
+
   }
 }
 

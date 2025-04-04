@@ -1,5 +1,11 @@
 .statisticContainer {
+  display: flex;
+  justify-content: center;
+
   margin-bottom: 200px;
+  @media (min-width: 320px) and (max-width: 1920px) {
+    margin-bottom: calc(84px + 116 * (100vw - 320px) / 1600);
+  }
 
   .statistic {
     display: flex;

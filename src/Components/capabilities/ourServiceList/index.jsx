@@ -1,5 +1,6 @@
 import './style.scss'
 import CapabilitiesArrow from "../arrow/index.jsx";
+import {useState} from "react";
 
 const items = [
     {
@@ -54,6 +55,12 @@ const items = [
 
 function OurServiceList() {
 
+    const [activeIndex, setActiveIndex] = useState(null);
+
+    const handleClick = (index) => {
+        setActiveIndex(activeIndex === index ? null : index);
+    };
+
     return (
         <div className="serviceList">
             <div className='serviceListHeaderContainer'>
@@ -66,7 +73,8 @@ function OurServiceList() {
             </div>
             <div className="serviceListItemsContainer">
                 {items.map((item, index) => (
-                    <div key={index} className="serviceItem">
+                    <div key={index} className={`serviceItem ${activeIndex === index ? 'serviceItemActive' : ''}`}
+                         onClick={() => handleClick(index)}>
                         <img src={item.imgPath} alt={item.text} />
                         <p>{item.text}</p>
                     </div>
