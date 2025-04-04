@@ -12,13 +12,13 @@ function Carousel({ links, className = '',slidesToShow = 5, settings: customSett
         dots: true,
         infinite: true,
         slidesToShow,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         autoplay: true,
         arrows: false,
         cssEase: "linear",
         pauseOnHover: true,
-        autoplaySpeed: 2000,   // важно
-        speed: 5000,
+        autoplaySpeed: 3000,
+        speed: 4000,
         responsive: [
             {
                 breakpoint: 1300,
