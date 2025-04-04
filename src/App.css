@@ -28,6 +28,11 @@
     font-weight: normal;
     font-style: normal;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --500: #04020d;
     --white: #f7f7fa;

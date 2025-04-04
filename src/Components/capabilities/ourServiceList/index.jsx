@@ -53,7 +53,7 @@ const items = [
     },
 ]
 
-function OurServiceList() {
+function OurServiceList({className = '', id = ''}) {
 
     const [activeIndex, setActiveIndex] = useState(null);
 
@@ -62,7 +62,7 @@ function OurServiceList() {
     };
 
     return (
-        <div className="serviceList">
+        <div className={`serviceList ${className}`} id={id}>
             <div className='serviceListHeaderContainer'>
                 <p>Our service list:</p>
                 <div className='arrowContainer'>

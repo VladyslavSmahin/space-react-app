@@ -4,22 +4,21 @@ import "slick-carousel/slick/slick-theme.css";
 import React, {useRef} from "react";
 import Slider from "react-slick";
 
-function Carousel({ links, className = '', slidesToShow = 5, settings: customSettings = {} }) {
+function Carousel({ links, className = '',slidesToShow = 5, settings: customSettings = {} }) {
 
     const sliderRef = useRef(null);
 
     let defaultSettings = {
         dots: true,
         infinite: true,
-        speed: 1000,
-        slidesToShow: 5,
-        slidesToScroll: 1,
+        slidesToShow,
+        slidesToScroll: 2,
         autoplay: true,
-        autoplaySpeed: 0,
         arrows: false,
-        loop: true,
         cssEase: "linear",
         pauseOnHover: true,
+        autoplaySpeed: 2000,   // важно
+        speed: 5000,
         responsive: [
             {
                 breakpoint: 1300,
@@ -71,8 +70,10 @@ function Carousel({ links, className = '', slidesToShow = 5, settings: customSet
             sliderRef.current.slickPlay();
         }
     };
+
+
     return (
-        <Slider {...defaultSettings}  ref={sliderRef}
+        <Slider {...mergedSettings}  ref={sliderRef}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 className={`custom-carousel ${className}`}>

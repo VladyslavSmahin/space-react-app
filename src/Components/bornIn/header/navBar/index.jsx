@@ -8,8 +8,8 @@ return (
     <div className={`navbarContainer ${className}`}>
         <nav className={`navbar ${className}`}>
             <ul className={`navbar-ul ${className}`}>
-                <li className={`nav-item active ${className}`}><a href='#'>servises</a></li>
-                <li className={`nav-item active ${className}`}><a href='#'>network</a></li>
+                <li className={`nav-item active ${className}`}><a href='#servises'>servises</a></li>
+                <li className={`nav-item active ${className}`}><a href='#network'>network</a></li>
                 <li className={`nav-item active ${className}`}><a href='#'>team</a></li>
             </ul>
         </nav>

@@ -28,7 +28,7 @@ function Capabilities() {
                             approach. But don't worry, we're here to help you out! </p>
                         <p className='Dont'>Don't leave the success of your business to chance - let's win together!</p>
                     </div>
-                    <OurServiceList/>
+                    <OurServiceList id='servises'/>
                 </div>
             </div>
         </div>

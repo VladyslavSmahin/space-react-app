@@ -22,7 +22,7 @@ function Network() {
 
     return (
         <div className='networkContainer container'>
-            <div className='network'>
+            <div className='network' id='network'>
                 <div className='networkMainContentContainer'>
                     <div className='networkMainContent'>
                         <CardName text='network' className='networkCard'/>

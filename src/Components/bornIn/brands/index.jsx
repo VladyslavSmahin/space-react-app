@@ -29,7 +29,7 @@ function Brands({className = ''}) {
                 </div>
             </div>
             <h4 className='brandsTitle brandsTitle1079'>Some Of The Brands <span>That Trust Us!</span></h4>
-            <Carousel links={links} className='brand1079' slidesToShow={5}/>
+            <Carousel links={links} className='brand1079' slidesToShow={5} />
         </div>
     );
 }
