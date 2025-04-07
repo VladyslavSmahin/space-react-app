@@ -1,112 +1,74 @@
 import './style.scss';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import React, {useRef} from "react";
-import Slider from "react-slick";
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {Autoplay} from 'swiper/modules';
+import 'swiper/css';
 
-function Carousel({ links, className = '',slidesToShow = 5, settings: customSettings = {} }) {
-
-    const sliderRef = useRef(null);
-
-    let defaultSettings = {
-        dots: true,
-        infinite: true,
-        slidesToShow,
-        slidesToScroll: 1,
-        autoplay: true,
-        arrows: false,
-        cssEase: "linear",
-        pauseOnHover: true,
-        autoplaySpeed: 3000,
-        speed: 4000,
-        responsive: [
-            {
-                breakpoint: 1300,
-                settings: {
-                    slidesToShow: Math.max(3, slidesToShow - 1),
-                    slidesToScroll: 1,
-                    infinite: true,
-                }
-            },
-            {
-                breakpoint: 1100,
-                settings: {
-                    slidesToShow: Math.max(2, slidesToShow - 2),
-                    slidesToScroll: 1,
-                    infinite: true,
-                }
-            },
-            {
-                breakpoint: 800,
-                settings: {
-                    slidesToShow: Math.max(1, slidesToShow - 3),
-                    slidesToScroll: 1,
-                    infinite: true,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                }
-            },
-        ]
-    };
-
-    const mergedSettings = { ...defaultSettings, ...customSettings };
-
-    console.log(mergedSettings);
-
-    const handleMouseEnter = () => {
-        if (sliderRef.current) {
-            sliderRef.current.slickPause();
-        }
-    };
-
-    const handleMouseLeave = () => {
-        if (sliderRef.current) {
-            sliderRef.current.slickPlay();
-        }
-    };
+function Carousel({links, className = '', slidesToShow = 5}) {
+    const canLoop = links.length > slidesToShow;
+    console.log('canLoop', canLoop, 'links.length', links.length, 'slidesToShow', slidesToShow);
 
 
     return (
-        <Slider {...mergedSettings}  ref={sliderRef}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+        <Swiper modules={[Autoplay]}
+                speed={5000}
+                key={canLoop}
+                loop={canLoop}
+                slidesPerView={5}
+                slidesPerGroup={1}
+                freeMode={true}
+                autoplay={{
+                    delay: 1000
+                }}
+                breakpoints={{
+                    1200: {
+                        slidesPerView: 4,
+                    },
+                    800: {
+                        slidesPerView: 3,
+                    },
+                    550: {
+                        slidesPerView: 2,
+                    },
+                    320: {
+                        slidesPerView: 1,
+                    },
+                }}
+                spaceBetween={10}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
                 className={`custom-carousel ${className}`}>
             {links && links.length > 0 ? (
                 links.map((link, index) => (
-                    <a
-                        key={index}
-                        href={link.url}
-                        className={`carouselItem ${className}`}
-                        rel="noopener noreferrer"
-                    >
-                        {link.path ? (
-                            <img
-                                src={link.path}
-                                alt={link.title || link.url || "Изображение"}
-                                className={`carouselImage ${className}`}
-                                onError={(e) => {
-                                    e.target.style.display = 'none'; // Скрываем изображение при ошибке
-                                }}
-                            />
-                        ) : null}
-                        {!link.path && (link.title || link.url) && (
-                            <span className={`carouselFallback ${className}`}>
-                                {link.title || link.url}
-                            </span>
-                        )}
-                    </a>
+                    <SwiperSlide key={index}>
+                        <a
+                            href={link.url}
+                            className={`carouselItem ${className}`}
+                            rel="noopener noreferrer"
+                        >
+                            {link.path ? (
+                                <img
+                                    src={link.path}
+                                    alt={link.title || link.url || "Изображение"}
+                                    className={`carouselImage ${className}`}
+                                    onError={(e) => {
+                                        e.target.style.display = 'none';
+                                    }}
+                                />
+                            ) : null}
+                            {!link.path && (link.title || link.url) && (
+                                <span className={`carouselFallback ${className}`}>
+                            {link.title || link.url}
+                        </span>
+                            )}
+                        </a>
+                    </SwiperSlide>
 
                 ))
             ) : (
                 <p>Нет элементов для отображения</p>
             )}
-        </Slider>
+        </Swiper>
     );
 }
 

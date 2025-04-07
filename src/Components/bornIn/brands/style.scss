@@ -39,7 +39,10 @@
       margin-bottom: calc(112px - 30 * (100vw - 320px) / 759);
     }
   }
-  .brand1079{
+  .brandCarousel1079{
+    @media (min-width: 1080px) {
+      display: none;
+    }
     .carouselImage{
       backdrop-filter: blur(24px);
       background: rgba(239, 60, 189, 0.05);
