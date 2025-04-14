@@ -73,7 +73,7 @@ function OurServiceList({className = '', id = ''}) {
             </div>
             <div className="serviceListItemsContainer">
                 {items.map((item, index) => (
-                    <div key={index} className={`serviceItem ${activeIndex === index ? 'serviceItemActive' : ''}`}
+                    <div key={index} className={`serviceItem serviceItem${index} ${activeIndex === index ? 'serviceItemActive' : ''}`}
                          onClick={() => handleClick(index)}>
                         <img src={item.imgPath} alt={item.text} />
                         <p>{item.text}</p>

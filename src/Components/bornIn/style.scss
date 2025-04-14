@@ -109,17 +109,36 @@
         display: none;
       }
 
-      .blushipLabel {
-        position: absolute;
-        top: 160px;
-        left: 179px;
-        height: 86px;
-        @media (min-width: 1080px) and (max-width: 1440px) {
-          height: calc(65px + 21 * (100vw - 1080px) / 360);
-          top: calc(113px + 47 * (100vw - 1080px) / 360);
-          left: calc(130px + 49 * (100vw - 1080px) / 360);
+      .with {
+        position: relative;
+
+        .blushipLabelWrapper {
+          height: 86px;
+          position: absolute;
+          top: 0;
+          left: 340px;
+          transform: translate(-50%,);
+          @media (min-width: 1080px) and (max-width: 1440px) {
+            left: calc(258px + 78 * (100vw - 1080px) / 360);
+            img {
+              height: calc(65px + 21 * (100vw - 1080px) / 360);
+            }
+          }
+
+          p {
+            background: linear-gradient(270deg, #ff2da0 0%, #7063ff 50.75%, #16baff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: absolute;
+            top: 2px;
+            left: 24px;
+          }
+
         }
       }
+
+
     }
 
     .goingTheExtra span:nth-child(1) {
@@ -129,6 +148,30 @@
     .goingTheExtra1079 {
       display: none;
       text-align: center;
+
+      .blushipLabelWrapper {
+        position: relative;
+        img{
+          max-width: 326px;
+          @media (min-width: 320px) and (max-width: 1080px) {
+            max-width: calc(190px + 136 * (100vw - 320px) / 760);
+          }
+
+        }
+        p{
+          background: linear-gradient(270deg, #ff2da0 0%, #7063ff 50.75%, #16baff 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          position: absolute;
+          top: 8px;
+          left: 50%;
+          transform: translate(-50%);
+          @media (min-width: 320px) and (max-width: 1080px) {
+            top: calc(4px + 4 * (100vw - 320px) / 760);
+          }
+        }
+      }
 
       @media (min-width: 320px) and (max-width: 1079px) {
         font-size: calc(36px + 24 * (100vw - 320px) / 759);
@@ -143,12 +186,6 @@
         margin-left: inherit;
       }
 
-      .blushipLabel {
-        position: relative;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%,);
-      }
     }
 
   }

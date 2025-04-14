@@ -99,10 +99,11 @@
     }
 
     .capabilitiesRightColumnText {
-      max-width: 594px;
-      align-self: flex-end;
+      max-width: 800px;
+      align-self: flex-start;
 
       @media (min-width: 758px) and (max-width: 1440px) {
+        align-self: flex-end;
         max-width: calc(460px + 134 * (100vw - 758px) / 682);
       }
 

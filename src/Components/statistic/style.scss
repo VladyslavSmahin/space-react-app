@@ -9,19 +9,85 @@
 
   .statistic {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     max-width: 1365px;
     @media (max-width: 1439px) {
-      max-width: 1000px;
-      justify-content: space-around;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-    .partnerCard{
-      max-width: 336px;
+
+    .statistic-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 42px 0;
+      border-bottom: 2px solid #181a2c;
+      border-top: 2px solid #181a2c;
+      border-right: 2px solid #181a2c;
+
+      width: 340px;
+      box-sizing: border-box;
+      @media (max-width: 1439px) {
+        width: 499px;
+      }
+      @media (max-width: 1080px) {
+        width: 339px;
+      }
       @media (min-width: 320px) and (max-width: 759px) {
-        max-width: calc(140px + 198 * (100vw - 320px) / 439);
+        flex-direction: column;
+        align-items: flex-start;
+        width: calc(141px + 151 * (100vw - 320px) / 439);
+        padding: 12px 10px;
       }
 
+      .partnerCard {
+        margin-right: 14px;
+
+      }
+
+      .descriptionWrapper {
+        .imageQuantity {
+          font-family: var(--font-family), sans-serif;
+          font-weight: 600;
+          font-size: 60px;
+          line-height: 107%;
+          color: var(--white);
+
+          @media (min-width: 320px) and (max-width: 759px) {
+            font-size: calc(35px + 7 * (100vw - 320px) / 439);
+          }
+
+        }
+
+        .imageText {
+          font-family: var(--font-family), sans-serif;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 157%;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
+          color: var(--white);
+          @media (max-width: 759px) {
+            font-size: 14px;
+          }
+        }
+      }
     }
+
+    .statistic-item-0 {
+      border-left: 2px solid #181a2c;
+    }
+
+    @media (max-width: 1439px) {
+      .statistic-item-0, .statistic-item-1 {
+        border-bottom: none;
+      }
+
+      .statistic-item-2 {
+        border-left: 2px solid #181a2c;
+      }
+    }
+
   }
 
 }
