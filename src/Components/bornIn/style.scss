@@ -148,6 +148,10 @@
     .goingTheExtra1079 {
       display: none;
       text-align: center;
+      @media (min-width: 320px) and (max-width: 1080px) {
+        padding-top: calc(82px + 30 * (100vw - 320px) / 760);
+      }
+      padding-top: 112px;
 
       .blushipLabelWrapper {
         position: relative;

@@ -42,7 +42,9 @@
 
       .partnerCard {
         margin-right: 14px;
-
+        @media (min-width: 320px) and (max-width: 759px) {
+          margin-bottom: 12px;
+        }
       }
 
       .descriptionWrapper {
@@ -54,7 +56,9 @@
           color: var(--white);
 
           @media (min-width: 320px) and (max-width: 759px) {
+
             font-size: calc(35px + 7 * (100vw - 320px) / 439);
+            margin-bottom: 4px;
           }
 
         }
