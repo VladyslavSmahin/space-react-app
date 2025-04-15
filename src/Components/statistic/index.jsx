@@ -10,7 +10,7 @@ const images = [
         <div className='statisticContainer container'>
             <div className='statistic'>
                 {images.map((image, index) => (
-                    <div className={`statistic-item statistic-item-${index}`} >
+                    <div className={`statistic-item statistic-item-${index}`} key={index}>
                         <img
                             key={index}
                             className="partnerCard"

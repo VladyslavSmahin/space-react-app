@@ -6,7 +6,6 @@ import 'swiper/css';
 
 function Carousel({links, className = '', slidesToShow = 5}) {
     const canLoop = links.length > slidesToShow;
-    console.log('canLoop', canLoop, 'links.length', links.length, 'slidesToShow', slidesToShow);
 
 
     return (
@@ -35,8 +34,6 @@ function Carousel({links, className = '', slidesToShow = 5}) {
                     },
                 }}
                 spaceBetween={10}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
                 className={`custom-carousel ${className}`}>
             {links && links.length > 0 ? (
                 links.map((link, index) => (

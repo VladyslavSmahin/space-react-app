@@ -3,6 +3,7 @@ import Button from "./header/button/index.jsx";
 import Brands from "./brands/index.jsx";
 import Logo from "./header/logo/index.jsx";
 import './style.scss'
+import Bluship from "../bluship/index.jsx";
 
 function BornIn() {
 
@@ -24,10 +25,11 @@ function BornIn() {
                     <span>Going the Extra Mile</span>
                     <span>Sees No Setbacks When You're Flying </span>
                     <div className='with'>with
-                        <div className='blushipLabelWrapper'>
+                        {/*<div className='blushipLabelWrapper'>
                             <img src='/images/BlushipLabel.svg' alt='BlushipLabel' className='blushipLabel'/>
                             <p>bluship</p>
-                        </div>
+                        </div>*/}
+                        <Bluship text='bluship'/>
                     </div>
                 </div>
                 <div className='goingTheExtra goingTheExtra1079'>

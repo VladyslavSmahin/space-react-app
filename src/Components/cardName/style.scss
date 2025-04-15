@@ -1,22 +1,25 @@
-.cardContainer{
+.cardContainer {
   position: relative;
-}
-.cardSvg{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.cardText{
-  text-transform: uppercase;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  color: black;
-  font-family: var(--font-family), sans-serif;
-  font-weight: 600;
-  font-size: 21px;
-  line-height: 152%;
+
+  .custom-button {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 7px 22px;
+    max-width: 141px;
+    background: linear-gradient(270deg, #ff2da0 0%, #7063ff 50.75%, #16baff 100%);
+    clip-path: polygon(0% 0%, 94% 0%, 100% 25%, 100% 100%, 6% 100%, 0% 75%);
+    display: inline-block;
+  }
+  .cardSvg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 152%;
+    color: black;
+    text-align: center;
+  }
 }

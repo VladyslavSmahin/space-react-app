@@ -126,10 +126,6 @@
           }
 
           p {
-            background: linear-gradient(270deg, #ff2da0 0%, #7063ff 50.75%, #16baff 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
             position: absolute;
             top: 2px;
             left: 24px;
@@ -155,18 +151,16 @@
 
       .blushipLabelWrapper {
         position: relative;
-        img{
+
+        img {
           max-width: 326px;
           @media (min-width: 320px) and (max-width: 1080px) {
             max-width: calc(190px + 136 * (100vw - 320px) / 760);
           }
 
         }
-        p{
-          background: linear-gradient(270deg, #ff2da0 0%, #7063ff 50.75%, #16baff 100%);
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent;
+
+        p {
           position: absolute;
           top: 8px;
           left: 50%;
@@ -218,4 +212,17 @@
     z-index: 0;
   }
 
+}
+
+.blushipLabelWrapper {
+  p {
+    background: linear-gradient(270deg, #ff2da0 0%, #7063ff 50.75%, #16baff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: absolute;
+    @media (min-width: 320px) and (max-width: 1080px) {
+      top: calc(4px + 4 * (100vw - 320px) / 760);
+    }
+  }
 }
